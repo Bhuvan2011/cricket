@@ -10,6 +10,14 @@ gem 'sqlite3', '~> 1.3.6'
 gem 'twitter-bootstrap-rails', '~> 2.1.3'
 gem 'therubyracer', '~> 0.10.2'
 
+group :production , :staging do
+  gem 'pg', '0.12.2'
+end
+
+group :development, :test do
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,9 +35,7 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
-group :production do
-  gem 'pg', '0.12.2'
-end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
