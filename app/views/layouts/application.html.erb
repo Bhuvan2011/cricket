@@ -20,22 +20,12 @@
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="#">Cricket Store</a>
-        <div class="btn-group">
-          <a class="btn" href="#">Action</a>
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-             <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <!-- dropdown menu links -->
-          </ul>
-</div>
         <div class="nav-collapse">
           <ul class="nav">
             <li><%= link_to "Browse Players", players_path %></li>
             <li><%= link_to "Price List" %></li>
             <li><%= link_to "Contact Us" %></li>
             <li><%= link_to "Cart" %></li>
-            <li>
           </ul>
           <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
@@ -52,8 +42,8 @@
   </div>
 
   <div class="container">
-  	<% flash.each do |name, msg| %>
-  		<div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
   			<a class="close" data-dismiss="alert">x</a>
   			<%= msg %>
   		</div>
