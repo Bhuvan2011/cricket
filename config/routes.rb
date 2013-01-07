@@ -1,4 +1,6 @@
 Cricket::Application.routes.draw do
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
   resources :players
 
   # The priority is based upon order of creation:

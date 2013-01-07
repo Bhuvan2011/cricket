@@ -14,9 +14,9 @@ group :production , :staging do
   gem 'pg', '0.12.2'
 end
 
-#group :development, :test do
- # gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-#end
+group :development, :test do
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,6 +34,9 @@ end
 gem 'jquery-rails'
 
 gem 'simple_form'
+
+gem 'devise'
+gem 'omniauth-facebook', '1.4.0' # There is an issue with 1.4.1: http://stackoverflow.com/questions/11597130/omniauth-facebook-keeps-reporting-invalid-credentials
 
 
 # To use ActiveModel has_secure_password

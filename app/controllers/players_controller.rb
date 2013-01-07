@@ -1,6 +1,8 @@
 class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
+  #
+  before_filter :authenticate_user!
   def index
     @players = Player.all
 
